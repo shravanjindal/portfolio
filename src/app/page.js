@@ -1,5 +1,11 @@
+import Chatbot from "../components/Chatbot";
+import Navbar from "../components/Navbar";
+
 export default function Porfolio() {
   return (
-      <h1>My portfolio</h1>
+      <>
+      <Navbar />
+        <Chatbot />
+      </>
   );
 }

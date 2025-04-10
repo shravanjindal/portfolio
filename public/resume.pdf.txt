@@ -1,0 +1,81 @@
+
+
+SHRAVAN JINDAL
+Ó+917696591026Rshravanjindal@gmail.com°LinkedInGithub
+Education
+DegreeInstitute/BoardGradesYear
+Bachelor of TechnologyIndian Institute of Technology, Ropar7.00 (Till 5th sem)2022-2026
+Senior SecondaryCentral Board of Secondary Education97.2%2022
+SecondaryCentral Board of Secondary Education92.8%2020
+Technical Skills
+•
+Programming Languages: C/C++, Python, JavaScript, Typescript, Java, Dart.
+•
+Development:Flutter, NextJs, ReactJS, ExpressJS, MongoDB, postgres, git, github, linux, LangChain, Hugging Face.
+•
+ML: PyTorch, Scikit Learn, Tensorflow, LLMs, NLP, OpenCV, MNE, numpy, pandas, matplotlib, seaborn.
+Experience
+•
+XYROMATICS Automation Solution Pvt. ltd.July 2024 - September 2024
+Machine Learning LeadOn-site ||Github
+–Contributing to a startup focused on predictive maintenance for machines, specializing in machine learning.
+–Working extensively with raw time series data from accelerometers and analyzing vibrations in time and frequency domain.
+–Developing classification algorithms to predict different types of faults and their severity stages for early warning.
+•
+IKSMHA | IIT MandiMay 2024 - July 2024
+Research InternOn-site ||Github||LOR
+–Expanded my knowledge of Python libraries for EEG data processing like MNE, gaining valuable insights.
+–I enhanced my expertise in time-frequency analysis. Using ITPC, ISPC to analyis phase connectivity among electrodes.
+–Using different tools like Topological Data Analysis to understand intrinsic features of dataset like shape and connectivity.
+Projects
+•
+LearnEra2025
+NextJS | MongoDB | Hugging FaceWebsite||Github
+–Enable users from different to achieve personalized skill growth through AI-driven task generation and evaluations.
+–Increased learning efficiency by 40% through an adaptive system that evaluates progress and customizes tasks.
+–Automated skill assessments, reducing manual effort by 60% and enhancing user engagement with AI-driven insights.
+•
+WanderLust2024
+NodeJS | EJS | ExpressJS | MongoDBWebsite||Github
+–Built a location-based peer-to-peer marketplace in MVC Architecture, integrating frontend and backend seamlessly
+–Created a responsive, intuitive UI for seamless navigation across devices, using EJS & CSS, ensuring modern user experience.
+–Integrated secure authentication, session management, and real-time updates for dynamic interaction.
+•
+FestEz2025
+Flutter | FirebaseApp||Github
+–Revolutionized fest experience, enabling real-time event tracking, instant updates, and hassle-free registrations.
+–Enhanced user engagement with live participation insights, helping attendees discover and join top events effortlessly.
+–Potiential to deliver 10,000+ sponsor impressions per fest, maximizing brand visibility through strategic in-app placements.
+•
+Other Projects
+–ClinicX: Generates medical reports, prescriptions, and suggests medications based on verified Databases.2025 ||Github
+–COW Implementation: Executed Copy-On-Write fork in xv6 OS improving memory management.2024 ||Github
+–Risc-V Assembler: Designed and applied a high-performance RISC-V assembler in C++.2024 ||Github
+–Data Dazzle: Comprehensive analysis of (80) house features to understand their influence on prices.2023 ||Github
+Achievements
+•
+Codeforces Rating- Pupil Rated - 1200+2025
+•
+General Championship Hackathon- Got 2nd position in Web-Development Hackathon.2024
+•
+Exhibition Representative- Represented Robotics Club in Metrix 5.0.2023
+•
+JEE Advanced- AIR - 17962022
+Key courses taken
+•
+Computer science fundamentals:Program Paradigms and Pragmatics, Operating Systems, Database management systems,
+Computer Networks, Data Structures & Algorithms, Analysis of Advanced Algorithms, Advance Data structures &
+Algorithms (PhD course), Theory of Computation, Computer Architecture, Software Engineering.
+•
+Machine Learning:Advanced Learning Algorithms, Supervised Machine Learning, Stanford CS229, Machine learning A-Z.
+•
+Mathematics:Probability and Stochastic, Differential Equations, Linear Algebra, Advanced Calculus.
+Positions of Responsibility
+•
+Sponsorship Head- Zeitgeitst, IIT Ropar - Managed the team and got 12.57 lakhs of sponsorship2024
+•
+Mentor- Robotics Club, IIT Ropar - Mentored over 100+ students.2024
+•
+Technical Coordinator- Robotics Club, IIT Ropar - Overseeing various club activities and made various projects.2023
+•
+Associate- DCypher Club, IIT Ropar - Directed various club activities.2023
