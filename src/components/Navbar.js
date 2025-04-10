@@ -3,10 +3,12 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import AddInfoDialog from "./forms/AddInfoDialog";
 
 export default function Navbar({ isDarkMode, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const links = ["Home", "Projects", "About", "Contact"];
 
@@ -15,9 +17,13 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
   const hoverColor = isDarkMode ? "hover:text-gray-400" : "hover:text-gray-700";
   const buttonBg = isDarkMode ? "bg-gray-700 hover:bg-gray-600" : "bg-black hover:bg-gray-800";
   const addInfoText = "text-white";
-
+  const handleClick = () => {
+    setIsDialogOpen(true);
+    setIsOpen(false);
+  };
   return (
-    <header className={clsx("w-full fixed top-0 z-50 shadow-md", bgColor, textColor)}>
+    <>
+      <header className={clsx("w-full fixed top-0 z-50 shadow-md", bgColor, textColor)}>
       <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <motion.a
@@ -51,9 +57,12 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
           </button>
 
           {/* Add Info Button */}
-          <button className={clsx(buttonBg, addInfoText, "px-4 py-2 rounded text-sm")}>
-            ➕ Add Info
-          </button>
+          <button
+              onClick={handleClick}
+              className={clsx(buttonBg, addInfoText, "px-4 py-2 rounded text-sm")}
+            >
+              ➕ Add Info
+            </button>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -83,17 +92,22 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
               {isDarkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
             </button>
             <button
-              className={clsx("w-full text-sm px-4 py-2 rounded", buttonBg, addInfoText)}
-              onClick={() => {
-                toggleMenu();
-                // Handle "Add Info" logic
-              }}
+              onClick={handleClick}
+              className={clsx(buttonBg, addInfoText, "px-4 py-2 rounded text-sm")}
             >
               ➕ Add Info
             </button>
+
+
           </div>
         </div>
+        
       )}
+
     </header>
+    <AddInfoDialog isOpen={isDialogOpen} setIsOpen={setIsDialogOpen} isDarkMode={isDarkMode} />
+
+    </>
+    
   );
 }
