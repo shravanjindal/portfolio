@@ -3,14 +3,20 @@ import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
-import AddInfoDialog from "./forms/AddInfoDialog";
 
 export default function Navbar({ isDarkMode, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
-  const links = ["Home", "Projects", "About", "Contact"];
+  const links = [
+    { title:"Home", 
+      href:"#home" 
+    },
+    { title:"Skills", href:"#skills" },
+    { title:"Experience", href:"#experience" },
+    { title:"Projects", href:"#projects" },
+    { title:"Contact", href:"#footer" }];
 
   const bgColor = isDarkMode ? "bg-[#1a1a1a]" : "bg-[#f4f4f4]";
   const textColor = isDarkMode ? "text-white" : "text-black";
@@ -39,11 +45,11 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
         <nav className="hidden md:flex space-x-6 items-center">
           {links.map((link) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.title}
+              href={`${link.href.toLowerCase()}`}
               className={clsx("transition", hoverColor)}
             >
-              {link}
+              {link.title}
             </a>
           ))}
 
@@ -55,14 +61,6 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
           >
             {isDarkMode ? "🌞" : "🌙"}
           </button>
-
-          {/* Add Info Button */}
-          <button
-              onClick={handleClick}
-              className={clsx(buttonBg, addInfoText, "px-4 py-2 rounded text-sm")}
-            >
-              ➕ Add Info
-            </button>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -78,24 +76,18 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
         <div className={clsx("md:hidden px-4 pb-4 space-y-3", textColor)}>
           {links.map((link) => (
             <a
-              key={link}
-              href={`#${link.toLowerCase()}`}
+              key={link.title}
+              href={`${link.href.toLowerCase()}`}
               className="block border-b border-gray-500 pb-2 text-sm"
               onClick={toggleMenu}
             >
-              {link}
+              {link.title}
             </a>
           ))}
 
           <div className="flex items-center justify-between pt-2 gap-3">
             <button onClick={toggleTheme} className="text-lg">
               {isDarkMode ? "🌞 Light Mode" : "🌙 Dark Mode"}
-            </button>
-            <button
-              onClick={handleClick}
-              className={clsx(buttonBg, addInfoText, "px-4 py-2 rounded text-sm")}
-            >
-              ➕ Add Info
             </button>
 
 
@@ -105,7 +97,6 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
       )}
 
     </header>
-    <AddInfoDialog isOpen={isDialogOpen} setIsOpen={setIsDialogOpen} isDarkMode={isDarkMode} />
 
     </>
     

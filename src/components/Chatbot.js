@@ -114,12 +114,18 @@ export default function Chatbot({ isDarkMode }) {
 
           {/* Input Field */}
           <div className="flex items-center gap-2">
-            <input
+          <input
               type="text"
               className={`p-2 flex-1 border rounded text-sm ${inputBg} ${textColor} ${borderColor}`}
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask me anything..."
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSend();
+                }
+              }}
             />
             <button
               onClick={handleSend}
