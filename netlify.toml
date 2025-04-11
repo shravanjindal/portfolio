@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build && npm run postbuild"
+  publish = "out"
+  functions = "netlify/functions"
+
+[[plugins]]
+  package = "@netlify/next"
