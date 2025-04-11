@@ -6,6 +6,8 @@ import ReactMarkdown from "react-markdown";
 import { v4 as uuidv4 } from "uuid";
 export default function Chatbot({ isDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const [isThrottled, setIsThrottled] = useState(false);
+
   const [messages, setMessages] = useState([
     {
       sender: "bot",
@@ -21,27 +23,33 @@ export default function Chatbot({ isDarkMode }) {
   }, [messages]);
 
   const handleSend = async () => {
-    if (!input.trim()) return;
-
+    if (!input.trim() || isThrottled) return;
+  
     const userMessage = { sender: "user", text: input };
     setMessages((prev) => [...prev, userMessage]);
     setInput("");
-
+  
     try {
       const response = await fetch("/api/getData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: input , sessionId: sessionId}),
+        body: JSON.stringify({ message: input, sessionId }),
       });
-
+  
       const data = await response.json();
+  
+      // Throttling logic
+      if (data.reply.includes("Too many requests")) {
+        setIsThrottled(true);
+        setTimeout(() => setIsThrottled(false), 20000); // 20 sec disable
+      }
+  
       const botMessage = {
         sender: "bot",
         text: data.reply || "Sorry, I couldn't get that. Try again?",
       };
-
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error("Error fetching response:", error);
@@ -51,7 +59,7 @@ export default function Chatbot({ isDarkMode }) {
       ]);
     }
   };
-
+  
   // Dynamic styling
   const containerBg = isDarkMode ? "bg-[#1e1e1e]" : "bg-white";
   const borderColor = isDarkMode ? "border-gray-700" : "border-gray-300";
@@ -121,6 +129,7 @@ export default function Chatbot({ isDarkMode }) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask me anything..."
+              disabled={isThrottled}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) {
                   e.preventDefault();
@@ -130,7 +139,8 @@ export default function Chatbot({ isDarkMode }) {
             />
             <button
               onClick={handleSend}
-              className="px-3 py-2 text-sm bg-blue-600 rounded text-white hover:bg-blue-700 transition"
+              className="px-3 py-2 text-sm bg-blue-600 rounded text-white hover:bg-blue-700 transition disabled:bg-gray-400"
+              disabled={isThrottled}
               aria-label="Send message"
             >
               📩

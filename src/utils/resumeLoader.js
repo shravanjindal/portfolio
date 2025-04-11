@@ -3,7 +3,7 @@ import path from "path";
 import pdf from "pdf-parse";
 
 let dataBuffer = fs.readFileSync(
-  path.join(process.cwd(), "public", "resume.pdf")
+  path.join(process.cwd(), "public", "DETAILED_CV.pdf")
 );
 let cachedResume = null;
 
