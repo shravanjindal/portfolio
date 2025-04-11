@@ -38,7 +38,7 @@ export default function Introduction({ isDarkMode }) {
             Hey! I&apos;m Shravan Jindal 👋
           </h1>
           <p className={clsx("text-lg sm:text-xl max-w-xl", subText)}>
-            I&apos;m a Final Year B.Tech Computer Science student at IIT Ropar. Passionate about building
+            I&apos;m a Pre-Final Year B.Tech Computer Science student at IIT Ropar. Passionate about building
             intelligent systems, full-stack web apps, and diving deep into data.
           </p>
 
