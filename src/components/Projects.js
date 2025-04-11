@@ -85,7 +85,7 @@ export default function Projects({ isDarkMode }) {
     {
       name: "RISC-V Assembler",
       description:
-        "Designed and implemented an assembler for the RISC-V instruction set in C++. Translated assembly language into machine code, handled labels and pseudo-instructions, and built a robust symbol table for multi-pass assembly. Demonstrated deep understanding of low-level architecture and instruction encoding.",
+        "Designed and implemented an assembler for the RISC-V instruction set in C++.",
       tags: ["C++", "RISC-V", "Assembler", "Instruction Set", "Symbol Table"],
       url: "https://github.com/shravanjindal/Riscv_Assembler",
     },
@@ -100,7 +100,7 @@ export default function Projects({ isDarkMode }) {
     {
       name: "CUCU compiler",
       description:
-        "Built a working compiler from scratch for a custom C-like language named CUCU. Implemented lexical analysis, parsing (LL(1)), syntax-directed translation, intermediate code generation, and a symbol table. Emphasized compiler design principles and AST construction.",
+        "Built a working compiler from scratch for a custom C-like language named CUCU.",
       tags: ["C", "Compiler Design", "Parsing", "LL(1)", "Intermediate Code"],
       url: "https://github.com/shravanjindal/cucu-compiler",
     },

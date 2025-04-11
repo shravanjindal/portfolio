@@ -15,7 +15,6 @@ export async function resumeLoader() {
   try {
     const data = await pdf(dataBuffer);
     cachedResume = data.text;
-    console.log(cachedResume);
     return cachedResume;
   } catch (error) {
     console.error("Error parsing PDF:", error);

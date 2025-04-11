@@ -7,7 +7,6 @@ import clsx from "clsx";
 export default function Navbar({ isDarkMode, toggleTheme }) {
   const [isOpen, setIsOpen] = useState(false);
   const toggleMenu = () => setIsOpen(!isOpen);
-  const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const links = [
     { title:"Home", 
