@@ -88,7 +88,9 @@ export default function Chatbot({ isDarkMode }) {
 
           {/* Messages */}
           <div
-            className={`flex-1 overflow-y-auto mb-2 p-2 border rounded ${borderColor} space-y-1`}
+            className={`flex-1 overflow-y-auto mb-2 p-2 border rounded space-y-1 ${
+              isDarkMode ? "dark-scroll" : "light-scroll"
+            } ${borderColor}`}
           >
             {messages.map((msg, index) => (
               <div

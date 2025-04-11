@@ -14,7 +14,7 @@ export default function Portfolio() {
   const toggleTheme = () => setIsDarkMode((prev) => !prev);
 
   return (
-    <div className={isDarkMode ? "bg-[#1a1a1a] text-white" : "bg-[#f4f4f4] text-black"}>
+    <div className={`${isDarkMode ? "bg-[#1a1a1a] text-white dark-scroll" : "bg-[#f4f4f4] text-black light-scroll"} h-screen overflow-y-scroll`}>
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <Introduction isDarkMode={isDarkMode} />
       <Skills isDarkMode={isDarkMode} />
