@@ -35,10 +35,10 @@ export default function Introduction({ isDarkMode }) {
         {/* Intro Text */}
         <div className="text-center md:text-left space-y-5">
           <h1 className="text-3xl sm:text-4xl font-bold">
-            Hey! I'm Shravan Jindal 👋
+            Hey! I&apos;m Shravan Jindal 👋
           </h1>
           <p className={clsx("text-lg sm:text-xl max-w-xl", subText)}>
-            I'm a Final Year B.Tech Computer Science student at IIT Ropar. Passionate about building
+            I&apos;m a Final Year B.Tech Computer Science student at IIT Ropar. Passionate about building
             intelligent systems, full-stack web apps, and diving deep into data.
           </p>
 

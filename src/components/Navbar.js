@@ -37,7 +37,7 @@ export default function Navbar({ isDarkMode, toggleTheme }) {
           initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
         >
-          Shravan's Portfolio
+          Shravan&apos;s Portfolio
         </motion.a>
 
         {/* Desktop Links */}
