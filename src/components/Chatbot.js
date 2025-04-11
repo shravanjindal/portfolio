@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { MessageSquare, X } from "lucide-react";
 import { motion } from "framer-motion";
 import ReactMarkdown from "react-markdown";
-
+import { v4 as uuidv4 } from "uuid";
 export default function Chatbot({ isDarkMode }) {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([
@@ -14,6 +14,7 @@ export default function Chatbot({ isDarkMode }) {
   ]);
   const [input, setInput] = useState("");
   const bottomRef = useRef(null);
+  const [sessionId, setSessionId] = useState(uuidv4());
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -32,7 +33,7 @@ export default function Chatbot({ isDarkMode }) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message: input }),
+        body: JSON.stringify({ message: input , sessionId: sessionId}),
       });
 
       const data = await response.json();
