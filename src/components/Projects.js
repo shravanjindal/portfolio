@@ -18,8 +18,15 @@ export default function Projects({ isDarkMode }) {
       name: "Learn Era",
       description:
         "An AI based web application for personalized learning experience.",
-      url: "https://github.com/shravanjindal/LearnEra",
-      tags: ["NextJS", "Machine Learning", "Hugging Face"],
+      url: "https://www.learneraclub.com/",
+      tags: ["NextJS", "Machine Learning", "Groq Cloud"],
+    },
+    {
+      name: "TradeHub",
+      description:
+        "A sleek and responsive ReactJS pages for crypto trading.",
+      url: "https://tradehub-phi.vercel.app/",
+      tags: ["ReactJS", "UI", "Finance"],
     },
     {
       name: "FestEz",
@@ -28,24 +35,17 @@ export default function Projects({ isDarkMode }) {
       tags: ["ReactJS", "Node", "MongoDB", "Team Project"],
     },
     {
+      name: "WanderLust",
+      description: "A travel planner using EJS templates and NodeJS backend.",
+      url: "https://wanderlust-66k3.onrender.com/listings",
+      tags: ["EJS", "NodeJS", "Express", "MongoDB"],
+    },
+    {
       name: "ClinicX",
       description:
         "An AI-powered doctor assistant for real-time medical support.",
       url: "https://github.com/shravanjindal/AI-Doctor-Assistant",
       tags: ["GenAI", "LangChain", "Hugging Face"],
-    },
-    {
-      name: "TradeHub",
-      description:
-        "A sleek and responsive ReactJS dashboard for crypto trading.",
-      url: "https://tradehub-phi.vercel.app/",
-      tags: ["ReactJS", "UI", "Finance"],
-    },
-    {
-      name: "WanderLust",
-      description: "A travel planner using EJS templates and NodeJS backend.",
-      url: "https://wanderlust-66k3.onrender.com/listings",
-      tags: ["EJS", "NodeJS", "Express", "MongoDB"],
     },
   ];
 
@@ -108,18 +108,18 @@ export default function Projects({ isDarkMode }) {
 
   const roboticsProjects = [
     {
-      name: "Hand Gesture Simulation",
-      description:
-        "Simulates hand gestures using Unity and C# for interactive applications.",
-      url: "https://github.com/shravanjindal/Hand_gesture_simulation",
-      tags: ["C#", "Unity", "Simulation"],
-    },
-    {
       name: "Hexapod",
       description:
         "A C++ project simulating the movement of a six-legged robot.",
       url: "https://github.com/shravanjindal/Hexapod",
       tags: ["C++", "Robotics"],
+    },
+    {
+      name: "Hand Gesture Simulation",
+      description:
+        "Simulates hand gestures using Unity and C# for interactive applications.",
+      url: "https://github.com/shravanjindal/Hand_gesture_simulation",
+      tags: ["C#", "Unity", "Simulation"],
     },
   ];
 
